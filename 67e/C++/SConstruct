@@ -1,0 +1,3 @@
+env = Environment(CCFLAGS='-O0 -Wall -Wextra -pedantic -Werror -std=c++0x')
+env.Append(CPPDEFINES='_GLIBCXX_DEBUG')
+env.Program(target="test", source=Glob('*.cpp'), LIBS=['boost_unit_test_framework'])
